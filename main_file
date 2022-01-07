@@ -1,0 +1,18 @@
+import random
+
+number = random.randint(1, 10)
+attempts = 3
+
+while attempts > 0 and guess != number:
+  print("You have " + str(attempts) + " attempts left")
+  guess = int(input("Guess the number (between 1 and 10): ")) 
+  if number == guess:
+    print("You won! The number was: " + str(number) )
+    attempts = attempts - 1
+  else:
+    print("try again!")
+    attempts = attempts - 1  
+
+if attempts == 0:
+  print("The number was " + str(number))
+  print("You lost! You are left with 0 attempts")
